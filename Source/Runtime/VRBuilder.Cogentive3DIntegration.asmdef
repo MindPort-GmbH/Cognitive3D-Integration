@@ -1,0 +1,20 @@
+{
+    "name": "VRBuilder.Cogentive3D",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c8561f9de838ac04d8feeda695bc572d",
+        "GUID:474da18fc7b8c9c4c9db09e343483375",
+        "GUID:956b6f76d123b8e4bb708cfcbffee10c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "VR_BUILDER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
