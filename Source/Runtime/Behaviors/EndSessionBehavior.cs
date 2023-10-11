@@ -13,7 +13,7 @@ namespace VRBuilder.Cogentive3D.Behaviours
     {
         [DisplayName("Cognitive3D Event")]
         [DataContract(IsReference = true)]
-        public class EntityData : IBehaviorData
+        public class EntityData : IBehaviorData, IBehaviorExecutionStages
         {
             /// <inheritdoc />
             public Metadata Metadata { get; set; }
@@ -28,11 +28,8 @@ namespace VRBuilder.Cogentive3D.Behaviours
                 }
             }
 
-            /// <summary>
-            /// A property that determines if the Behavior should be run at activation or deactivation (or both).
-            /// </summary>
+            /// <inheritdoc />
             [DataMember]
-            [DisplayName("Execution stages")]
             public BehaviorExecutionStages ExecutionStages { get; set; }
         }
 
