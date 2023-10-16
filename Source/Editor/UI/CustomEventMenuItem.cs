@@ -7,7 +7,7 @@ namespace VRBuilder.Cognitive3DIntegration.Behaviours.UI
     public class CustomEventMenuItem : MenuItem<IBehavior>
     {
         /// <inheritdoc />
-        public override string DisplayedName { get; } = "Cognitive3D/Custom Event";
+        public override string DisplayedName { get; } = "Cognitive3D/Send Custom Event";
 
         /// <inheritdoc />
         public override IBehavior GetNewItem()

@@ -1,5 +1,6 @@
 using System.Runtime.Serialization;
 using UnityEngine;
+using VRBuilder.Cognitive3DIntegration.Properties;
 using VRBuilder.Core;
 using VRBuilder.Core.Attributes;
 using VRBuilder.Core.Behaviors;
@@ -37,7 +38,7 @@ namespace VRBuilder.Cognitive3DIntegration.Behaviours
 
             [DataMember]
             [DisplayName("Dynamic Object (optional)")]
-            [DisplayTooltip("The Dynamic Object id and position will be includet in the Event")]
+            [DisplayTooltip("The Dynamic Object id and position will be included in the Event")]
             public ScenePropertyReference<IDynamicObjectProperty> Target { get; set; }
 
             /// <inheritdoc />
@@ -103,6 +104,7 @@ namespace VRBuilder.Cognitive3DIntegration.Behaviours
             return new RecordCustomEventProcess(BehaviorExecutionStages.Activation, Data);
         }
 
+        /// <inheritdoc />
         public override IStageProcess GetDeactivatingProcess()
         {
             return new RecordCustomEventProcess(BehaviorExecutionStages.Deactivation, Data);
