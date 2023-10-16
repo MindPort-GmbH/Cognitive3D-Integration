@@ -6,7 +6,7 @@ using VRBuilder.Core.Behaviors;
 using VRBuilder.Core.SceneObjects;
 using VRBuilder.Core.Utils;
 
-namespace VRBuilder.Cogentive3D.Behaviours
+namespace VRBuilder.Cognitive3DIntegration.Behaviours
 {
     /// <summary>
     /// A behavior that records a event and sends it to the Cognitive3D API
