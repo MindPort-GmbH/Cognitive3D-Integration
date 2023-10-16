@@ -26,7 +26,7 @@ namespace VRBuilder.Cogentive3D.Behaviours
             {
                 get
                 {
-                    string target = Target.IsEmpty() ? "" : $" on {Target.Value.GameObject.name}";
+                    string target = Target.IsEmpty() ? "" : $" on {Target.Value.SceneObject.GameObject.name}";
                     return $"Record Event{target}";
                 }
             }
@@ -38,7 +38,7 @@ namespace VRBuilder.Cogentive3D.Behaviours
             [DataMember]
             [DisplayName("Dynamic Object (optional)")]
             [DisplayTooltip("The Dynamic Object id and position will be includet in the Event")]
-            public SceneObjectReference Target { get; set; }
+            public ScenePropertyReference<IDynamicObjectProperty> Target { get; set; }
 
             /// <inheritdoc />
             [DataMember]
@@ -68,17 +68,13 @@ namespace VRBuilder.Cogentive3D.Behaviours
 
                 string dynamicId = "";
                 Cognitive3D.DynamicObject dynamic;
-                if (Data.Target != null)
+
+                // We need this check because the DynamicObject is an optional parameter
+                if (Data.Target.Value != null)
                 {
-                    if (Data.Target.Value != null)
-                    {
-                        if (Data.Target.Value.GameObject != null)
-                        {
-                            dynamic = Data.Target.Value.GameObject.GetComponent<Cognitive3D.DynamicObject>();
-                            dynamicId = dynamic.GetId();
-                            eventPosition = dynamic.transform.position;
-                        }
-                    }
+                    dynamic = Data.Target.Value.DynamicObject;
+                    dynamicId = dynamic.GetId();
+                    eventPosition = dynamic.transform.position;
                 }
 
                 Cognitive3D.CustomEvent.SendCustomEvent(Data.EventName, eventPosition, dynamicId);
@@ -89,14 +85,14 @@ namespace VRBuilder.Cogentive3D.Behaviours
         {
         }
 
-        public CustomEventBehavior(string eventName, ISceneObject targetObject, BehaviorExecutionStages executionStages) : this(eventName, ProcessReferenceUtils.GetNameFrom(targetObject), executionStages)
+        public CustomEventBehavior(string eventName, IDynamicObjectProperty targetObject, BehaviorExecutionStages executionStages) : this(eventName, ProcessReferenceUtils.GetNameFrom(targetObject), executionStages)
         {
 
         }
 
         public CustomEventBehavior(string eventName, string targetObject, BehaviorExecutionStages executionStages)
         {
-            Data.Target = new SceneObjectReference(targetObject);
+            Data.Target = new ScenePropertyReference<IDynamicObjectProperty>(targetObject);
             Data.EventName = eventName;
             Data.ExecutionStages = executionStages;
         }
