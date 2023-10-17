@@ -71,11 +71,14 @@ namespace VRBuilder.Cognitive3DIntegration.Behaviours
                 Cognitive3D.DynamicObject dynamic;
 
                 // We need this check because the DynamicObject is an optional parameter
-                if (Data.Target.Value != null)
+                if (Data.Target != null)
                 {
-                    dynamic = Data.Target.Value.DynamicObject;
-                    dynamicId = dynamic.GetId();
-                    eventPosition = dynamic.transform.position;
+                    if (Data.Target.Value != null)
+                    {
+                        dynamic = Data.Target.Value.DynamicObject;
+                        dynamicId = dynamic.GetId();
+                        eventPosition = dynamic.transform.position;
+                    }
                 }
 
                 Cognitive3D.CustomEvent.SendCustomEvent(Data.EventName, eventPosition, dynamicId);
