@@ -3,7 +3,7 @@ using VRBuilder.Core;
 using VRBuilder.Core.Attributes;
 using VRBuilder.Core.Behaviors;
 
-namespace VRBuilder.Cogentive3D.Behaviours
+namespace VRBuilder.Cognitive3DIntegration.Behaviours
 {
     /// <summary>
     /// A behavior that ends the Cognitive3D session. After this no other events can be send.

@@ -1,10 +1,10 @@
 {
-    "name": "VRBuilder.Editor.Cogentive3DIntegration",
+    "name": "VRBuilder.Editor.Cognitive3DIntegration",
     "rootNamespace": "",
     "references": [
         "VRBuilder.Core",
         "VRBuilder.Editor",
-        "VRBuilder.Cogentive3D"
+        "VRBuilder.Cognitive3D"
     ],
     "includePlatforms": [
         "Editor"
