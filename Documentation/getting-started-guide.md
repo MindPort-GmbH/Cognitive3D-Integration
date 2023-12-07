@@ -1,7 +1,5 @@
-# VRIF Interaction Component for VR Builder
-## Table of Contents
+# Cognitive3D integration for VR Builder
 
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Installation](#installation)
 	- [Requirements](#requirements)
@@ -37,7 +35,7 @@ The Documentation for Cognitive3D can be found [here](https://docs.cognitive3d.c
 
 This integration includes the following process behaviors which will make use of the Cognitive3D Unity Plugin.
 
-![Cognitive3D Behaviors](images/behaviors.png)
+<img src="images/behaviors.png" alt="Cognitive3D Behaviors" width="600">
 
 ### Send Custom Event Behavior
 This can be used for tracking a step before or after its execution is happening. It is possible to attach a Cognitive3D DynamicObject to the event to add more context to an event. For more infos, have a look at the Cognitive3D documentation about SendCustomEvent and DynamicObject.
