@@ -17,7 +17,7 @@ VR Builder is a tool for quickly creating sequential interactive processes, like
 ## Installation
 
 ### Requirements
-- This add-on requires VR Builder version v3.3.2 or later to work.
+- This add-on requires VR Builder version 3.3.2 or later to work.
 - This add-on is based on Cognitive3D 1.3.9. Earlier versions might work, but they are untested.
 
 ### How to Install

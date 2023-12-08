@@ -7,13 +7,13 @@ VR Builder is a tool for quickly creating sequential interactive processes, like
 ## Installation
 
 ### Requirements
-- This add-on requires VR Builder version v3.3.2 or later to work.
+- This add-on requires VR Builder version 3.3.2 or later to work.
 - This add-on is based on Cognitive3D 1.3.9. Earlier versions might work, but they are untested.
 
 ### How to Install
 
 1. First, ensure that both Cognitive3D and VR Builder are present in the project.
-2. Import the Unity package for this add-on it will be place into `Assets/MindPort/VR Builder/Add-ons/Cognitive3DIntegration/`.
+2. Import the Unity package for this add-on. It will be placed in `Assets/MindPort/VR Builder/Add-ons/Cognitive3DIntegration/`.
 
 ## Documentation
 
