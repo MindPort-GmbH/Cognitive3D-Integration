@@ -4,7 +4,6 @@
 - [Installation](#installation)
 	- [Requirements](#requirements)
 	- [How to Install](#how-to-install)
-- [Quick Start](#quick-start)
 - [Process Behaviors](#process-behaviors)
 	- [Send Custom Event Behavior](#send-custom-event-behavior)
 	- [End Session Behavior](#end-session-behavior)
@@ -12,7 +11,7 @@
 
 ## Introduction
 
-VR Builder is a tool for quickly creating sequential interactive processes, like for example tutorials, by using an easy-to-use visual editor. This add-on allows the use of VR Builder together with the [Cognitive3D](https://cognitive3d.com/) analytics framework.
+[Cognitive3D](https://cognitive3d.com/) is the best in class analytics platform for VR/AR simulations. This Add-on will allow you to track events in VR Builder and report them to the Cognitive3D platform. If you are new to VR Builder, we strongly suggest getting familiar with the basics in the core [documentation](https://www.mindport.co/vr-builder/manual/introduction), also available in the asset's folder. The Documentation for Cognitive3D can be found [here](https://docs.cognitive3d.com/).
 
 ## Installation
 
@@ -24,12 +23,6 @@ VR Builder is a tool for quickly creating sequential interactive processes, like
 
 1. First, ensure that both Cognitive3D and VR Builder are present in the project.
 2. Import the Unity package for this add-on; it will be placed into `Assets/MindPort/VR Builder/Add-ons/Cognitive3DIntegration/`.
-
-## Quick Start
-
-If you are new to VR Builder, we strongly suggest getting familiar with the basics in the core [documentation](https://www.mindport.co/vr-builder/manual/introduction), also available in the asset's folder.
-
-The Documentation for Cognitive3D can be found [here](https://docs.cognitive3d.com/)
 
 ## Process Behaviors
 
